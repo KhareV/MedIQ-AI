@@ -49,6 +49,3 @@ export function useGroq() {
     isLoading,
   };
 }
-
-// Keep the old export for backward compatibility
-export const useGemini = useGroq;

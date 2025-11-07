@@ -103,12 +103,7 @@ export default function MedIQPlatform() {
         case "dashboard":
           return <PatientDashboard onNavigate={setViewMode} />;
         case "chat":
-          return (
-            <ChatInterface
-              chatId={currentChatId}
-              onNewChat={setCurrentChatId}
-            />
-          );
+          return <ChatInterface chatId={currentChatId} />;
         case "3d-body":
           return <HumanBodyVisualization />;
         case "records":
@@ -116,12 +111,7 @@ export default function MedIQPlatform() {
         case "knowledge":
           return <MedicalKnowledgeBase />;
         default:
-          return (
-            <ChatInterface
-              chatId={currentChatId}
-              onNewChat={setCurrentChatId}
-            />
-          );
+          return <ChatInterface chatId={currentChatId} />;
       }
     } catch (error) {
       console.error("Component rendering error:", error);
